@@ -1,0 +1,20 @@
+Royale with cheese|4.00
+Le Big Mac|4.00
+Milkshake|5.00
+Noodle|7.00
+Fired Rice|5.00
+Chocolate cupcake|3.00
+Mint cupcake|3.00
+Peanut cupcake|3.00
+Vanilla cupcake|3.00
+                   Iced Coffee|3.00
+Iced Mocha Coffee|3.50
+Iced Latte|3.50
+Iced Tea|3.50
+Combo1|10.00
+Combo2          |             12.50                         
+Combo3|8.50
+Pancake|3.00
+Soup|3.50
+Pizza|12.00
+Water|1.00

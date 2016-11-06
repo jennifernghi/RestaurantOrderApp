@@ -1,0 +1,49 @@
+user: 010872316 (Nghi, Nguyen)
+
+How it work:
+	1. when program is loaded, data (from menu.txt) is initialized, credit card textfield, placeorder button, clearbutton are disabled
+	2. user chooses the items on the menu
+	3. the selected items with prices are added to the ordered table. the total price is updated at the same time.
+	4. User can now enter credit card # and select place order or clear order
+		* credit card #: must contain all numbers
+		
+		* place order: user can either click on place order button or hit ENTER when finish inputing # in credit card textfield.
+				->if Error: show alert if:
+					1 - a character that is not a number exists
+					2 - not a valid credit card, i.e, not a visa, master, American express or discover card
+					3 - credit card textfield empty
+				->if success: show confirmation alert with information of:
+						1. credit card number with last 4 digits
+						2. Type of credit card
+						3. Total paid price
+					when user click OK or hit ENTER, the program will be cleared
+					
+		* clear order: all the selected items, credit card number will be cleared
+		
+How to run: 
+
+	1. run the jar file: java -jar McPatterns.jar 
+	    Note: you can’t use your own menu.txt to test
+	or
+	2. compile: javac McPatternDemo.java
+	   run: java McPatternDemo
+		IMPORTANT: if you want to use your own menu.txt, you need to replace it with the one in the folder and name it: menu.txt
+
+Questions:
+1.Describe the design patterns that you used (you may use plain english or diagrams - handdrawn is fine).
+	please see UML.pdf for fully uml diagram
+	1. Design Pattern: MVP architecture based on combination of chain of responsibility pattern (client sends requests by interacting with the program and controller handle client' requests) and factory method pattern
+		+ Factory method pattern: when order is placed, appropriate credit card objects will be created based on credit card number. 
+2.What are the pros and cons of your choices. 
+	1. pros:
+		+ enhance abstraction since there is no "relationship" between main view and model classes
+		+ all logic flows occur in controller class, make it easier to maintain 
+		+ avoid coupling
+		+ Classes in Factory method pattern:
+			- separation between application and families of classes, more credit card types can be added later with little change of code
+			- loose coupling
+	2. cons:
+		+ quite difficult to keep track of progress, i.e, every "behavior" in the program have to be handled.
+		+ the flow of works can be easily broken if there is a request that is not handled or not handled completely
+						
+					

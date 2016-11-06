@@ -1,0 +1,13 @@
+
+
+.label, .table-view, .text-field{
+	-fx-font: 17px "Serif";
+    -fx-text-fill: black;
+}
+.button {
+    -fx-text-fill: black;
+	-fx-font: 16px "Serif";
+    -fx-font-weight: bold;
+    -fx-background-color: #87ceeb;
+    
+}
